@@ -58,7 +58,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -78,7 +82,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -98,7 +106,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -118,7 +130,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -138,7 +154,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -158,7 +178,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -178,7 +202,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
@@ -198,7 +226,11 @@ open class PreferencesStore(
 
         val mimicState = MimicMutableState({ state.value }) { value ->
             coroutineScope.launch {
-                appContext.dataStore.edit { it[key] = value }
+                runCatching {
+                    appContext.dataStore.edit { it[key] = value }
+                }.onFailure {
+                    it.printStackTrace()
+                }
             }
         }
 
