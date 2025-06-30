@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.somnionocte.litesettingsstore"
+    namespace = "com.somnionocte.preferencesstore"
     compileSdk = 35
 
     defaultConfig {

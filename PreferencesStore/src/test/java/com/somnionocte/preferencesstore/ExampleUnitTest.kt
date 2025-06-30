@@ -1,4 +1,4 @@
-package com.somnionocte.litesettingsstore
+package com.somnionocte.preferencesstore
 
 import org.junit.Test
 

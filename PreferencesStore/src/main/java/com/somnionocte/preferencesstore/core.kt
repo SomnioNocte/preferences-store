@@ -1,10 +1,7 @@
-package com.somnionocte.litesettingsstore
+package com.somnionocte.preferencesstore
 
 import android.content.Context
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -24,7 +21,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.enums.enumEntries
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore("PreferencesStore")
 
@@ -41,7 +37,7 @@ fun <T> MimicMutableState(
     override fun component2(): (T) -> Unit = { value = it }
 }
 
-class PreferencesStore(
+open class PreferencesStore(
     private val appContext: Context,
     val coroutineScope: CoroutineScope = CoroutineScope(Dispatchers.IO)
 ) {
